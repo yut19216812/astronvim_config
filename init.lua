@@ -18,13 +18,20 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  -- colorscheme = "astrodark",
+  colorscheme = "neon",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
     underline = true,
   },
+
+  -- lsp = {
+  --   servers = {
+  --     "pyright",
+  --   },
+  -- },
 
   lsp = {
     -- customize lsp formatting options
@@ -50,7 +57,22 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "pyright",
+    },
+    config = {
+      pyright = {
+        -- single_filesupport = false,
+        settings = {
+          python = {
+            analysis = {
+              autoImportCompletions = true,
+              autoSearchPaths = true,
+              useLibraryCodeForTypes = true,
+              -- diagnosticMode = "workspace",
+            },
+          },
+        },
+      },
     },
   },
 
@@ -81,5 +103,14 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.opt.tm = 500
+
+    local wr_group = vim.api.nvim_create_augroup("WinResize", { clear = true })
+    vim.api.nvim_create_autocmd("VimResized", {
+      group = wr_group,
+      pattern = "*",
+      command = "wincmd =",
+      desc = "Automatically resize windows when the host window size changes.",
+    })
   end,
 }
