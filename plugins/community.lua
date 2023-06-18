@@ -5,5 +5,9 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   -- { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.colorscheme.nightfox-nvim" },
+  { import = "astrocommunity.completion.tabnine-nvim" },
+
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
