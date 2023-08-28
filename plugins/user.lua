@@ -9,13 +9,16 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  {
-    "rafamadriz/neon",
-    init = function()
-      vim.g.neon_style = "dark"
-      vim.g.neon_italic_comment = true
-    end,
-  },
+  -- {
+  --   "rafamadriz/neon",
+  --   init = function()
+  --     vim.g.neon_style = "dark"
+  --     vim.g.neon_italic_comment = true
+  --     vim.g.neon_italic_keyword = true
+  --     -- vim.g.neon_italic_function = true
+  --     -- vim.g.neon_transparent = true
+  --   end,
+  -- },
   {
     "epwalsh/obsidian.nvim",
     lazy = true,
@@ -40,7 +43,7 @@ return {
       -- "junegunn/fzf.vim"
 
       -- Optional, alternative to nvim-treesitter for syntax highlighting.
-      "godlygeek/tabular",
+      -- "godlygeek/tabular",
       "preservim/vim-markdown",
     },
     opts = {
