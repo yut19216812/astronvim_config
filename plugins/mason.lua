@@ -9,11 +9,11 @@ return {
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
         "html",
         "marksman",
-        "jsonls",
+        -- "jsonls",
         "pyright",
         "lua_ls",
-        "tsserver",
-        "yamlls",
+        -- "tsserver",
+        -- "yamlls",
       })
     end,
   },
@@ -27,9 +27,9 @@ return {
         "stylua",
         "blackd-client",
         "isort",
-        "prettierd",
+        -- "prettierd",
         "pyproject-flake8",
-        "eslint_d"
+        -- "eslint_d",
       })
     end,
   },

@@ -8,16 +8,12 @@ return {
   --   config = function()
   --     require("lsp_signature").setup()
   --   end,
-  -- },
+  -- }
   -- {
-  --   "rafamadriz/neon",
-  --   init = function()
-  --     vim.g.neon_style = "dark"
-  --     vim.g.neon_italic_comment = true
-  --     vim.g.neon_italic_keyword = true
-  --     -- vim.g.neon_italic_function = true
-  --     -- vim.g.neon_transparent = true
-  --   end,
+  --   "AlexvZyl/nordic.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function() require("nordic").load() end,
   -- },
   {
     "epwalsh/obsidian.nvim",
@@ -44,7 +40,7 @@ return {
 
       -- Optional, alternative to nvim-treesitter for syntax highlighting.
       -- "godlygeek/tabular",
-      "preservim/vim-markdown",
+      -- "preservim/vim-markdown",
     },
     opts = {
       dir = vim.fn.expand "~/" .. ".obsidian", -- no need to call 'vim.fn.expand' here

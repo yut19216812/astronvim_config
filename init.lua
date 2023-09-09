@@ -18,13 +18,13 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  -- colorscheme = "astrodark",
   -- colorscheme = "carbonfox",
-  -- colorscheme = "nightfox",
-  -- colorscheme = "nordfox",
   -- colorscheme = "iceberg",
-  -- colorscheme = "tokyonight-night",
   -- colorscheme = "catppuccin",
+  -- colorscheme = "tokyonight-night",
+  -- colorscheme = "nordic",
+  colorscheme = "poimandres",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {

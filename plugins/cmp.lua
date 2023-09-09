@@ -7,12 +7,13 @@ return {
     -- local cmp = require "cmp"
     -- modify the sources part of the options table
     -- opts.sources = cmp.config.sources {
-    --   { name = "tabnine-nvim", priority = 1000 },
-    --   { name = "nvim_lsp", priority = 900 },
-    --   { name = "nvim_lua", priority = 800 },
-    --   { name = "luasnip", priority = 750 },
-    --   { name = "buffer", priority = 500 },
-    --   { name = "path", priority = 250 },
+    -- { name = "copilot-lua-cmp", priority = 1000 },
+    -- { name = "tabnine-nvim", priority = 900 },
+    -- { name = "nvim_lsp", priority = 800 },
+    -- { name = "nvim_lua", priority = 700 },
+    -- { name = "luasnip", priority = 600 },
+    -- { name = "buffer", priority = 500 },
+    -- { name = "path", priority = 250 },
     -- }
     --
     -- return the new table to be used

@@ -4,16 +4,17 @@ return {
     -- add more things to the ensure_installed table protecting against community packs modifying it,
     opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
       "lua",
-      "terraform",
+      -- "terraform",
       "jsonnet",
-      "dockerfile",
+      -- "dockerfile",
       "bash",
-      "json",
-      "markdown",
+      -- "json",
+      -- "markdown",
       "prisma",
+      -- "typescript",
+      -- "yaml",
+      ----------> for python
       "python",
-      "typescript",
-      "yaml",
       "toml",
     })
   end,
