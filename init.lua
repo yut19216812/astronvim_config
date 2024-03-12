@@ -10,9 +10,7 @@ return {
     skip_prompts = false, -- skip prompts about breaking changes
     show_changelog = true, -- show the changelog after performing an update
     auto_quit = false, -- automatically quit the current session after a successful update
-    remotes = { -- easily add new remotes to track
-      --   ["remote_name"] = "https://remote_url.come/repo.git", -- full remote url
-      --   ["remote2"] = "github_user/repo", -- GitHub user/repo shortcut,
+    remotes = { -- easily add new remotes to track ["remote_name"] = "https://remote_url.come/repo.git", -- full remote url ["remote2"] = "github_user/repo", -- GitHub user/repo shortcut,
       --   ["remote3"] = "github_user", -- GitHub user assume AstroNvim fork
     },
   },
@@ -20,8 +18,8 @@ return {
   -- Set colorscheme to use
   -- colorscheme = "astrodark",
   -- colorscheme = "carbonfox",
+  -- colorscheme = "terafox",
   -- colorscheme = "iceberg",
-  -- colorscheme = "catppuccin",
   -- colorscheme = "tokyonight-night",
   -- colorscheme = "nordic",
   colorscheme = "poimandres",
@@ -62,6 +60,7 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       "pyright",
+      "rust_analyzer",
     },
     config = {
       pyright = {
@@ -73,6 +72,18 @@ return {
               autoSearchPaths = true,
               useLibraryCodeForTypes = true,
               -- diagnosticMode = "workspace",
+            },
+          },
+        },
+      },
+      rust_analyzer = {
+        settings = {
+          ["rust-analyzer"] = {
+            checkOnSave = {
+              command = "clippy",
+            },
+            rustfmt = {
+              extraArgs = { "+nightly" },
             },
           },
         },
